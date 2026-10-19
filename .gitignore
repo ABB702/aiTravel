@@ -1,26 +1,30 @@
-# 依赖
-node_modules/
-
-# 构建产物
-dist/
-dist-ssr/
-
-# 本地环境文件
-*.local
-
-# 日志
-logs/
-*.log
-npm-debug.log*
-
-# 测试覆盖率
-coverage/
+# 本仓库为 monorepo:frontend/ 与 backend/ 各有独立的忽略规则,
+# 此处只放全局通用与后端(Java)相关的规则。前端规则见 frontend/.gitignore。
 
 # 编辑器与系统文件
 .vscode/*
 !.vscode/extensions.json
 .idea/
+*.iml
 .DS_Store
 Thumbs.db
 *.suo
 *.sw?
+
+# 日志
+logs/
+*.log
+
+# 本地环境文件
+*.local
+
+# 后端(Java)构建产物
+backend/target/
+backend/build/
+backend/.gradle/
+*.class
+
+# 后端本地配置,可能包含数据库密码或密钥,不要提交
+backend/**/application-local.yml
+backend/**/application-local.yaml
+backend/**/application-local.properties
