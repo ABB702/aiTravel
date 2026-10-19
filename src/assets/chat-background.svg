@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="旅行插画">
+  <ellipse cx="160" cy="176" rx="130" ry="10" fill="#1d6fdc" opacity="0.08"/>
+  <g fill="#1d6fdc" opacity="0.12">
+    <circle cx="70" cy="60" r="22"/>
+    <circle cx="94" cy="66" r="18"/>
+    <circle cx="50" cy="68" r="16"/>
+    <circle cx="250" cy="44" r="18"/>
+    <circle cx="272" cy="50" r="14"/>
+    <circle cx="232" cy="52" r="12"/>
+  </g>
+  <path d="M60 150c30-60 80-20 110-50s50-30 90-60" fill="none" stroke="#1d6fdc" stroke-width="3" stroke-dasharray="6 8" stroke-linecap="round" opacity="0.5"/>
+  <path d="M262 36 232 52l12 5 6 12 4-9 8-20Z" fill="#1d6fdc"/>
+  <path d="M160 70c-14 0-24 10-24 24 0 18 24 42 24 42s24-24 24-42c0-14-10-24-24-24Z" fill="#f59e0b"/>
+  <circle cx="160" cy="94" r="9" fill="#ffffff"/>
+  <rect x="96" y="132" width="44" height="34" rx="6" fill="#1d6fdc" opacity="0.85"/>
+  <rect x="108" y="124" width="20" height="10" rx="4" fill="none" stroke="#1d6fdc" stroke-width="3"/>
+  <rect x="186" y="140" width="36" height="26" rx="5" fill="#f59e0b" opacity="0.85"/>
+</svg>

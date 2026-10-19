@@ -1,0 +1,24 @@
+/*
+ * 覆盖 Element Plus 主色,使其与自定义组件同色。
+ * 必须在 Element Plus 的 CSS 之后加载。
+ * Element Plus 的派生色不会随主色自动重算,这里全部以 --color-primary 为基准重新声明:
+ * light-N 为主色与白色混合,dark-2 为主色与黑色混合。
+ */
+:root {
+  --el-color-primary: var(--color-primary);
+  --el-color-primary-light-3: color-mix(in srgb, var(--color-primary) 70%, white);
+  --el-color-primary-light-5: color-mix(in srgb, var(--color-primary) 50%, white);
+  --el-color-primary-light-7: color-mix(in srgb, var(--color-primary) 30%, white);
+  --el-color-primary-light-8: color-mix(in srgb, var(--color-primary) 20%, white);
+  --el-color-primary-light-9: color-mix(in srgb, var(--color-primary) 10%, white);
+  --el-color-primary-dark-2: color-mix(in srgb, var(--color-primary) 80%, black);
+
+  --el-color-danger: var(--color-danger);
+  --el-font-family: var(--font-family);
+  --el-font-size-base: var(--font-size-base);
+  --el-border-radius-base: var(--radius-sm);
+  --el-text-color-primary: var(--color-text);
+  --el-text-color-regular: var(--color-text);
+  --el-text-color-secondary: var(--color-text-secondary);
+  --el-border-color: var(--color-border);
+}

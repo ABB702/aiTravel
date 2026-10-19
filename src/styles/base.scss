@@ -1,0 +1,60 @@
+// 全局基础样式:字体、聚焦轮廓、可点击元素反馈
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  background: var(--color-bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+// 键盘聚焦时显示明显轮廓
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+// 可点击元素:指针样式与悬停反馈
+a,
+button,
+[role='button'] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+// 页面内容容器:三个页面共用的内边距,并防止子元素撑出横向滚动条
+.page-container {
+  min-width: 0;
+  padding: var(--space-4);
+}
+
+// 尊重用户的"减少动态效果"偏好
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

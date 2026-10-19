@@ -1,0 +1,49 @@
+// 响应式规则:移动端优先,仅使用 min-width 媒体查询($mq-tablet-up、$mq-desktop-up)。
+// 默认规则即手机端;平板及以上在媒体查询中放宽。
+// 断点数值来自 src/constants/breakpoints.js,由 vite.config.js 注入。
+
+// ---- 触控目标:手机端最小 44px,相邻间距不小于 8px ----
+
+// Element Plus 的按钮、输入框等统一使用 --el-component-size 控制高度
+:root {
+  --el-component-size: var(--touch-target-min);
+}
+
+.el-button,
+.el-input-number__decrease,
+.el-input-number__increase,
+.el-drawer__close-btn,
+.el-dropdown-menu__item,
+.summary-bar,
+.destination-card,
+.empty-state__faq-item,
+.app-sidebar__link,
+.bottom-tab-bar__item {
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+}
+
+// 相邻的按钮至少间隔 8px
+.el-button + .el-button {
+  margin-left: var(--touch-gap-min);
+}
+
+// ---- 平板及以上:恢复 Element Plus 默认尺寸并放宽布局 ----
+
+@media #{$mq-tablet-up} {
+  :root {
+    --el-component-size: 32px;
+  }
+
+  .el-button,
+  .el-input-number__decrease,
+  .el-input-number__increase,
+  .el-drawer__close-btn {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .page-container {
+    padding: var(--space-6);
+  }
+}
